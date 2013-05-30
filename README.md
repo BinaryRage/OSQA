@@ -4,7 +4,7 @@ This is a fork of the read-only SVN clone of OSQA for improvements and bug fixes
 * http://meta.osqa.net/questions/11580/is-anyone-interested-in-testing-experimental-endless-pagingpjax-loading
 * http://meta.osqa.net/questions/7400/is-mobile-formatting-in-the-future-of-osqa/11550
 
-This fork also significantly improves performance by a addressing template parsing overhead problem. I also strongly recommend using pgpool2 for production environments:
+This fork also significantly improves performance by addressing a template parsing overhead problem. I also strongly recommend using pgpool2 for production environments:
 
 * http://meta.osqa.net/questions/11381/is-osqa-cpu-bound
 
