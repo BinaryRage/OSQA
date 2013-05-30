@@ -28,7 +28,7 @@ And create the database for OSQA:
     psql template1
     CREATE DATABASE osqa OWNER osqa;
 
-Copy settings_local.py.dist to settings_local.py, and update the database settings:
+Copy settings_local.py.dist to settings_local.py. Update the database settings:
 
     DATABASES = {
         'default': {
@@ -41,7 +41,13 @@ Copy settings_local.py.dist to settings_local.py, and update the database settin
         }
     }
 
-Finally, create the schema and start a development server:
+And the application URL:
+
+    APP_URL = 'http://localhost'
+
+Create the schema and start a development server:
 
     python manage.py syncdb
     python manage.py runserver
+
+Finally, access OSQA for the first time and register an account. That account will be granted administrator privileges.
