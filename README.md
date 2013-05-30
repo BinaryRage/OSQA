@@ -9,3 +9,39 @@ This fork also significantly improves performance by a addressing template parsi
 * http://meta.osqa.net/questions/11381/is-osqa-cpu-bound
 
 I'm happy to accept pull requests and if there's demand, I'd consider making this a maintained, legitimate fork of OSQA. Development/maintenance appears to have slowed significantly.
+
+#### Quick Start ####
+
+Assuming an existing Python and PostgreSQL installation (Mac OS/brew in my case).
+
+You'll need to install the following:
+
+    pip install Django==1.3.7
+    pip install Markdown
+    pip install html5lib
+    pip install django-endless-pagination
+    easy_install psycopg2
+
+And create the database for OSQA:
+
+    createuser -P osqa
+    psql template1
+    CREATE DATABASE osqa OWNER osqa;
+
+Copy settings_local.py.dist to settings_local.py, and update the database settings:
+
+    DATABASES = {
+        'default': {
+            'ENGINE': 'postgresql_psycopg2',
+            'NAME': 'osqa',
+            'USER': 'osqa',
+            'PASSWORD': 'osqa',
+            'HOST': 'localhost',
+            'PORT': '5432',
+        }
+    }
+
+Finally, create the schema and start a development server:
+
+    python manage.py syncdb
+    python manage.py runserver
