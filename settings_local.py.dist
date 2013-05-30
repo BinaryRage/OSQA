@@ -38,10 +38,11 @@ DATABASES = {
 # Cache configuration. Only one configuration should be uncommented
 
 # Filesystem caching
+LOCAL_CACHE_LOCATION = os.path.join(os.path.dirname(__file__),'cache').replace('\\','/')
 CACHES = {
     'default': {
         'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
-        'LOCATION': "os.path.join(os.path.dirname(__file__),'cache').replace('\\','/')",
+        'LOCATION': LOCAL_CACHE_LOCATION,
     }
 }
 
