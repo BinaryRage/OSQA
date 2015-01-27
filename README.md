@@ -17,10 +17,10 @@ Assuming an existing Python and PostgreSQL installation (Mac OS/brew in my case)
 You'll need to install the following:
 
     pip install Django==1.3.7
-    pip install Markdown
+    pip install Markdown==2.4.1
     pip install html5lib
     pip install django-endless-pagination
-    easy_install psycopg2
+    pip install psycopg2
 
 And create the database for OSQA:
 
