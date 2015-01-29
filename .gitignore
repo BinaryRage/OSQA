@@ -1,7 +1,8 @@
 *.pyc
 .pydevproject
 .settings
-cache/*
-log/django.osqa.log
 osqa.wsgi
 settings_local.py
+cache/*
+forum/upfiles
+log/django.osqa.log
